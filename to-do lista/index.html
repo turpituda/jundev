@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO LIST</title>
+    <link rel="stylesheet" href="toDo.css">
+    <script src="toDo.js"></script>
+</head>
+<body>
+    <div class="header">
+        <!--naslov, neka slika, datum-->
+        <div class="refresh">
+            <!--dugme za refreširanje čitave liste-->
+            <img src="slike/refresh.png" width="30px" height="30px" alt="">
+        </div>
+        <p class="datum"><script> document.write(new Date().toLocaleDateString()); </script></p>
+    </div>
+
+    <div class="sadrzajListe">
+        <!--sadržaj liste, ovdje mogu da mijenjam, prevlačim, brišem-->
+        <ul id="lista">
+            <li class="stavka">
+                <i class="uradjeno"></i>
+                <p class="tekstStavke">aa</p>
+                <i class="obrisiStavku"></i>
+            </li>
+        </ul>
+    </div>
+
+    <form class="unos">
+        <!--ovdje unosim nove stavke-->
+        <input type="text" name="dodajStavku" id="dodajStavku" placeholder="add list item">
+        <button class="dugmeDodajStavku" type="submit">Add</button>
+    </form>
+</body>
+</html>
