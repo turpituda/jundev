@@ -1,47 +1,4 @@
-
-ul {
-    margin: 0;
-    padding: 0;
-    
-}
-* {
-    box-sizing: border-box;
-  }
-  ul li {
-    cursor: pointer;
-    position: relative;
-    padding: 12px 8px 12px 40px;
-    background: #eee;
-    font-size: 18px;
-    transition: 0.2s;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  ul li:hover {
-    background: grey;
-  }
-
-  ul li.checked {
-    background: rgb(92, 90, 90);
-    color: #fff;
-    text-decoration: line-through;
-  }
-
-  ul li.checked::before {
-    content: '';
-    position: absolute;
-    border-color: #fff;
-    border-style: solid;
-    border-width: 0 2px 2px 0;
-    top: 10px;
-    left: 16px;
-    transform: rotate(45deg);
-    height: 15px;
-    width: 7px;
-  }
-  .header {
+.header {
     background-image: url(slike/pozadina.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -50,44 +7,121 @@ ul {
     text-align: center;
     height: 250px;
     position: relative;
-  }
-.datum {
+}
+#date {
     text-align: left;
     font-size: x-large;
     font-weight: bold;
     position: absolute;
-    bottom: 0px;
+    bottom: 10px;
+    left: 60px;
+  }
+.refreshDugme {
+  background-image: url(slike/refresh.png);
+  background-repeat: repeat;
+  background-size: 35px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 35px;
+  width: 35px;
 }
-div.refresh {
-  text-align: right;
-  padding-right: 0px;
-  padding-top: 180px;
+.refreshDugme:hover{
+  cursor: pointer;
+  text-shadow: 1px 3px 5px #000;
+  transform: rotate(45deg);
 }
+
+/* sadržaj liste */
+.sadrzajListe {
+  max-height: 350px;
+  overflow: auto;
+  background-color: rgb(218, 218, 218);
+}
+.sadrzajListe ul {
+  margin: 0;
+  padding: 0;
+}
+.stavka {
+  min-height: 80px;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.stavka i.uradjeno{
+  background-image: url(slike/circle.png);
+  background-repeat: no-repeat;
+  background-size: 35px;
+  position: absolute;
+  padding-left: 5px;
+  left: 15px;
+  top: 23px;
+  height: 35px;
+  width: 35px;
+}
+.stavka i.uradjeno:hover {
+  cursor: pointer;
+}
+.stavka p.text{
+  position: absolute;
+  font-size: 23px;
+  left: 70px;
+  padding-top: 0px;
+  margin-top: 25px;
+  background-color: #d9d9d9;
+  max-width: 285px;
+}
+#lineThrough {
+  text-decoration: line-through;
+  color: white;
+}
+.stavka i.obrisiStavku{
+  background-image: url(slike/trash.png);
+  background-repeat: no-repeat;
+  background-size: 35px;
+  position: absolute;
+  font-size: 25px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  top: 23px;
+}
+.stavka i.obrisiStavku {
+  cursor: pointer;
+}
+
+/*unos stavki*/
 .unos {
   position: absolute;
-  width: 100%;
+  width: 99%;
   display:flex;
   flex-direction:row;
   border:1px solid grey;
-  bottom: 30px;
   height: 70px;
+  background-color: white;
+  bottom: 20px;
 }
-.dugmeDodajStavku {
-  position: relative;
-  padding: 10px;
-  width: 25%;
-  background: #d9d9d9;
-  color: #555;
-  float: right;
-  text-align: center;
-  font-size: 16px;
-  cursor: copy;
-  transition: 0.3s;
-  border-radius: 1;
+.unos i.dodajStavku {
+  background-image: url(slike/plusCircle.png);
+  background-size: 40px;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 40px;
+  padding-right: 10px;
+  top: 15px;
+  height: 40px;
+  width: 40px;
 }
-#dodajStavku {
-  width: 200px;
-  height: auto;
-  padding-right: 50px;
-  flex-grow:2;
+.unos i.dodajStavku:hover{
+  cursor: pointer;
 }
+.unos input {
+  width: 100%;
+  height: 100%;
+  bottom: 20px;
+  font-size: 20px;
+  padding-left: 15px;
+}
+
