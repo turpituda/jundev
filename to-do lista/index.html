@@ -5,33 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TO-DO LIST</title>
     <link rel="stylesheet" href="toDo.css">
-    <script src="toDo.js"></script>
 </head>
 <body>
+    <div class="container"> 
     <div class="header">
         <!--naslov, neka slika, datum-->
-        <div class="refresh">
+        <div id="refresh" class="refresh">
             <!--dugme za refreširanje čitave liste-->
-            <img src="slike/refresh.png" width="30px" height="30px" alt="">
+            <i class="refreshDugme"></i>
         </div>
-        <p class="datum"><script> document.write(new Date().toLocaleDateString()); </script></p>
+        <div id="date"></div>
     </div>
-
-    <div class="sadrzajListe">
+    </div>
+    
+    <div id="sadrzajListe" class="sadrzajListe">
         <!--sadržaj liste, ovdje mogu da mijenjam, prevlačim, brišem-->
         <ul id="lista">
-            <li class="stavka">
-                <i class="uradjeno"></i>
-                <p class="tekstStavke">aa</p>
-                <i class="obrisiStavku"></i>
-            </li>
+             <!--<li class="stavka">
+                <i class="uradjeno" job="complete" id=""></i>
+                <p class="text"></p>
+                <i class="obrisiStavku" job="delete" id=""></i>
+             </li> -->
         </ul>
     </div>
-
-    <form class="unos">
+    
+    <form id="unos" class="unos">
         <!--ovdje unosim nove stavke-->
-        <input type="text" name="dodajStavku" id="dodajStavku" placeholder="add list item">
-        <button class="dugmeDodajStavku" type="submit">Add</button>
+        <input type="text" id="input" placeholder="Add a to-do">
+        <i class="dodajStavku"></i>    
     </form>
+    <script src="toDo.js"></script>
 </body>
 </html>
